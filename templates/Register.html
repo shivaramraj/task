@@ -1,0 +1,52 @@
+{% extends 'dummy.html' %}
+
+{% block title %}
+<title>Insert</title>
+{% endblock %}
+
+{% block body_block %}
+<style>
+h1
+{
+    background-color: aqua;
+}
+form
+{
+    background-color: rgba(200, 255, 182, 0.408);
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    height: 420px;
+    width: 300px;
+    font-size: 20px;
+}
+input
+{
+    border-radius: 5px;
+}
+#one
+{
+    border-radius:0px 10px 0px 10px ;
+    background: linear-gradient(to right,red,black);
+    color: whitesmoke;
+    font-size: 20px;
+    padding:2px;
+    width: 150px;
+
+
+}
+
+</style>
+    <center>
+        <h1>Register here</h1>
+
+
+        <form action="" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            
+            {{UFO.as_p}}
+            <input type="submit" value="Register" id="one">
+
+            
+        </form>
+    </center>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'dummy.html' %}
+
+{% block title %}
+<title>Insert</title>
+{% endblock %}
+
+{% block body_block %}
+
+
+<div class="container mt-3">
+    <div class="row">
+        {% for i in data %}
+        <div class="col-md-4">
+            <div class="card bg-primary mb-3" style="width:20rem; height:30rem;">
+                <div class="card-header">
+                  <img src="{{i.TrainImage}}" alt="" width="250px" height="240px">
+                </div>
+                <div class="card-body">
+                    <a href="{{i.id}}"><h1 class="card-title ">{{i.TrainName}}<h1></a>
+                
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+   </div>
+   </div>
+   {% endblock %}
